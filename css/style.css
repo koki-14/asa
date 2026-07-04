@@ -4,6 +4,7 @@
 }
 
 body {
+  padding-bottom: 120px;
   margin: 0;
   font-family: system-ui, sans-serif;
   touch-action:none;
