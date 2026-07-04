@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Site</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="manifest" href="../manifest.json">
+</head>
+<body>
+
+
+<!-- ヘッダー（スマホ用） -->
+<header class="header">
+  <button class="menu-btn" id="menuBtn">☰</button>
+  <h1 class="logo">News</h1>
+</header>
+
+<!-- 左スライドメニュー -->
+<nav class="side-nav" id="nav">
+<div class="pc-menu">
+  <a href="home.html">Home</a>
+  <a href="calendar.html">Calendar</a>
+</div>
+  <a href="News.html">News</a>
+  <a id="OwnerLogin">Owner</a>
+  <button class="insbtn" id="installBtn" hidden>Install</button>
+  <button class="logbtn" id="logoutBtn">Log Out</button>
+</nav>
+
+
+
+<!-- 背景オーバーレイ -->
+<div class="overlay" id="overlay"></div>
+
+
+<!-- メイン -->
+<main class="main">
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Welcome</h1>
+    </div>
+  </section>
+
+  <section class="content">
+
+    <h2>~更新‼~</h2>
+<ul>
+<div class="icon-list">     
+<!-- 情報 ここから-->
+
+<!-- この中にNEWSを追加 -->
+<div class="news">
+   <li><h2>回覧板(2026/07/04)</h2></li>
+
+        <a href="../pdf/kairanban.pdf"><img src="../icon/kairanban.png" alt="回覧板"></a>
+
+</div>        
+
+
+
+
+
+
+<!-- この中にNEWSを追加 ここまで -->
+</div>
+</ul>
+<!-- 情報ここまで -->
+  </section>
+</main>
+
+<footer class="footer">
+    <img src="../icon/icon-1.png" alt="Icon">
+  © 2026 My Site (ASADA KOKI)
+</footer>
+
+
+
+  <div id="selectedLabel" class="selected-label">Home</div>
+
+  <!-- 半円メニュー overflow:hidden により下半分を隠して半円に見せる -->
+  <div id="menuContainer" class="menu-container">
+
+    <!-- 円本体 JSで回転する -->
+    <div id="wheel" class="wheel">
+
+    <!-- Home -->
+    <button class="menu-item" data-name="Home" data-url="index.html">Home</button>
+
+    <!-- Calendar -->
+    <button class="menu-item" data-name="Calendar" data-url="calendar.html">Calendar</button>
+
+
+
+    </div>
+  </div>
+
+  <!-- フローティングHomeボタン タップでメニュー開閉 -->
+  <button id="SercleBtn" class="sercle-btn">◒</button>
+
+  <!-- 半円メニュー制御 -->
+  <script src="../js/radial-menu.js"></script>
+
+
+  <script src="../js/script.js" defer></script>
+  <script src="../js/login.js" defer></script>
+  <script src="../js/install.js" defer></script>
+
+</body>
+</html>
