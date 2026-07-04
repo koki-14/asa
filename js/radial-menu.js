@@ -264,7 +264,7 @@ wheel.addEventListener(
       currentX
       - previousX;
 
-    currentRotation +=
+    currentRotation -=
       delta * 0.5;
 
     velocity =
