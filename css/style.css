@@ -7,7 +7,7 @@ body {
   padding-bottom: 120px;
   margin: 0;
   font-family: system-ui, sans-serif;
-  touch-action:none;
+  touch-action:auto;
 }
 /* ===== 共通 ここまで===== */
 
@@ -35,6 +35,8 @@ body {
   background: none;
   border: none;
   color: #fff;
+
+  cursor:pointer;
 }
 
 
@@ -73,49 +75,29 @@ body {
   left: 0;
 }
 
-.admbtn {
-  margin-top: auto;
-
-  padding: 12px;
-  color: white;
-
-  background: none;
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 8px;
-
-  font-size: 18px;
-  cursor: pointer;
+.admbtn,
+.logbtn,
+.insbtn{
+  padding:12px;
+  color:#fff;
+  background:none;
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:8px;
+  font-size:18px;
+  cursor:pointer;
 }
 
-
-.logbtn {
-  margin-top: auto;
-
-  padding: 12px;
-  color: white;
-
-  background: none;
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 8px;
-
-  font-size: 18px;
-  cursor: pointer;
+.logbtn{
+  margin-top:auto;
 }
 
-.insbtn {
-  margin-top: 2px;
-
-  padding: 12px;
-  color: white;
-
-  background: none;
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 8px;
-
-  font-size: 18px;
-  cursor: pointer;
+.admbtn{
+  margin-top:8px;
 }
 
+.insbtn{
+  margin-top:2px;
+}
 
 /* ===== サイドメニュー ここまで===== */
 
@@ -142,7 +124,7 @@ body {
 /* ===== メイン ===== */
 .main {
   padding-left: 0;
-
+  padding-top: 60px;
   /* フッターに隠れないように下へ余裕のある余白を追加 */
   padding-bottom: 150px;
 }
@@ -298,285 +280,9 @@ background: #ffeaea;
   }
 
   .hero {
-    margin-top: 105.6px;
+  margin-top: 0;
   }
 
 
 }
 /* ===== PC表示 ここまで===== */
-
-
-/* ===== スマホ表示 ここから===== */
-@media(max-width:480px){
-
-/* =======================================
-   表示時
-======================================= */
-
-.overlay.show{
-
-  opacity:1;
-
-  visibility:visible;
-
-}
-
-/* =======================================
-   選択中ラベル
-======================================= */
-
-.selected-label{
-
-  position:fixed;
-
-  left:50%;
-
-  bottom:160px;
-
-  transform:translateX(-50%);
-
-  background:white;
-
-  padding:10px 20px;
-
-  border-radius:30px;
-
-  box-shadow:
-    0 4px 15px rgba(0,0,0,.2);
-
-  font-weight:bold;
-
-  z-index:1400;
-
-  opacity:0;
-
-  transition:.3s;
-
-}
-
-/* =======================================
-   ラベル表示
-======================================= */
-
-.selected-label.show{
-
-  opacity:1;
-
-}
-
-/* =======================================
-   Homeボタン
-======================================= */
-
-.sercle-btn{
-
-  position:fixed;
-
-  left:50%;
-
-  bottom:100px;
-
-  transform:translateX(-50%);
-
-  width:70px;
-
-  height:70px;
-
-  border:none;
-
-  border-radius:50%;
-
-  background:#2196f3;
-
-  color:white;
-
-  font-size:28px;
-
-  cursor:pointer;
-
-  box-shadow:
-    0 6px 20px rgba(0,0,0,.25);
-
-  z-index:1300;
-
-}
-
-/* =======================================
-   押した時
-======================================= */
-
-.sercle-btn:active{
-
-  transform:
-    translateX(-50%)
-    scale(.95);
-
-}
-
-/* =======================================
-   半円コンテナ
-
-   初期状態は画面下
-======================================= */
-
-.menu-container{
-
-  position:fixed;
-
-  left:50%;
-
-  bottom:-350px;
-
-  transform:translateX(-50%);
-
-  width:360px;
-
-  height:180px;
-
-  overflow:hidden;
-
-  transition:.4s ease;
-
-  z-index:1200;
-
-}
-
-/* =======================================
-   表示状態
-======================================= */
-
-.menu-container.show{
-
-  bottom:-10px;
-
-}
-
-/* =======================================
-   円本体
-======================================= */
-
-.wheel{
-
-  position:absolute;
-
-  width:360px;
-
-  height:360px;
-
-  border-radius:50%;
-
-  background:white;
-
-  box-shadow:
-    0 0 25px rgba(0,0,0,.2);
-
-  transition:
-    transform .2s linear;
-
-}
-
-/* =======================================
-   ボタン共通
-======================================= */
-
-.menu-item{
-
-  position:absolute;
-
-  width:90px;
-
-  height:90px;
-
-  border:none;
-
-  border-radius:50%;
-
-  background:#eeeeee;
-
-  font-size:14px;
-
-  cursor:pointer;
-
-  transition:
-    transform .25s,
-    background .25s,
-    color .25s;
-
-}
-
-/* =======================================
-   Home
-======================================= */
-
-.menu-item:nth-child(1){
-
-  top:20px;
-  left:135px;
-
-}
-
-/* =======================================
-   Calendar
-======================================= */
-
-.menu-item:nth-child(2){
-
-  top:135px;
-  left:20px;
-
-}
-
-
-/* =======================================
-   選択中ボタン
-
-   JSから active を付与
-======================================= */
-
-.menu-item.active{
-
-  transform:scale(1.5);
-
-  background:#2196f3;
-
-  color:white;
-
-  box-shadow:
-    0 0 20px rgba(33,150,243,.5);
-
-}
-
-  .menu-container{
-
-    width:320px;
-
-    height:160px;
-
-  }
-
-  .wheel{
-
-    width:320px;
-
-    height:320px;
-
-  }
-
-  .menu-item{
-
-    width:80px;
-
-    height:80px;
-
-  }
-
-}
-
-
-
-
-
-
-}
-/* ===== スマホ表示 ここまで===== */
-
