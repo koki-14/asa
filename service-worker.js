@@ -8,17 +8,17 @@ const urls = [
 "/pages/calendar.html",
 "/pages/owner.html",
 "/pages/news.html",
+"/pages/Owner/data.html",
 
 "/css/admin.css",
 "/css/style.css",
 "/css/calendar.css",
 
-"/js/admin.js",
 "/js/script.js",
 "/js/calendar.js",
 "/js/install.js",
 "/js/login.js",
-"/js/radial-menu.js",
+"/js/holiday.js",
 
 "/data/2026/schedule.json",
 "/data/2027/schedule.json",
@@ -30,6 +30,8 @@ const urls = [
 "/icon/icon-1.png",
 "/icon/icon-2.png",
 "/icon/kairanban.png",
+
+"/pdf/kairanban.pdf",
 
 "/manifest.json"
 ];
