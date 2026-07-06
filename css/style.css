@@ -264,18 +264,6 @@ background: #ffeaea;
     left: 0;
   }
 
-.pc-menu {
-  display: flex;
-  flex-direction: column;
-}
-
-.pc-menu a {
-  color: #fff;
-  text-decoration: none;
-  padding: 12px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-
   .main {
     margin-left: 260px;
   }
